@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body { font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1; }
+  ::selection { background: rgba(212, 160, 23, 0.35); color: #fafaf5; }
+}
+
+@layer components {
+  .container-wide   { @apply mx-auto px-6 max-w-6xl; }
+  .container-narrow { @apply mx-auto px-6 max-w-4xl; }
+  .container-read   { @apply mx-auto px-6 max-w-3xl; }
+
+  .ring-ring { @apply font-mono text-xs uppercase tracking-widest text-gold-400; }
+  .signature { @apply italic text-gold-400; }
+  .deed-tag  { @apply inline-block font-mono text-xs px-2 py-1 rounded
+                      bg-ink-800 text-gold-300 border border-gold-800 whitespace-nowrap; }
+  .ctm-readout {
+    @apply bg-ink-800 border border-ink-700 rounded p-5 font-mono text-sm;
+  }
+  .ctm-row {
+    @apply flex justify-between text-cream-100 py-1;
+  }
+  .ctm-row span:first-child { @apply text-cream-200; }
+  .ctm-row span:last-child  { @apply text-gold-300; }
+}
